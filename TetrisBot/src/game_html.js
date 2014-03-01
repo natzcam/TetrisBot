@@ -14,7 +14,6 @@ function playGame() {
 
     if (last_move.game_over || moveCount > moveLimit) {
       finalScore += eltetris.rows_completed;
-      println("finalScore:" + finalScore);
       return;
     }
   }
@@ -22,11 +21,12 @@ function playGame() {
 
 function play() {
   finalScore = 0;
-  
-  for (var i = 0; i < 5; i++) {
+
+  for (var i = 0; i < 1; i++) {
     playGame();
   }
 
-  finalScore /= 5;
+  finalScore /= 1;
+  println("finalScore:" + finalScore);
 }
 

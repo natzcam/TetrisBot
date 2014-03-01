@@ -22,8 +22,8 @@ public class TetrisBot {
     Swarm swarm = new Swarm(Swarm.DEFAULT_NUMBER_OF_PARTICLES, new MyParticle(), new MyFitnessFunction());
 // Set position (and velocity) constraints. 
 // i.e.: where to look for solutions
-    swarm.setMaxPosition(20);
-    swarm.setMinPosition(-20);
+    swarm.setMaxPosition(100);
+    swarm.setMinPosition(-100);
 // Optimize a few times
     for (int i = 0; i < 20; i++) {
       swarm.evolve();
