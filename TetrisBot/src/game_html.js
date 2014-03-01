@@ -22,11 +22,11 @@ function playGame() {
 function play() {
   finalScore = 0;
 
-  for (var i = 0; i < 1; i++) {
+  for (var i = 0; i < 3; i++) {
     playGame();
   }
 
-  finalScore /= 1;
+  finalScore /= 3;
   println("finalScore:" + finalScore);
 }
 
