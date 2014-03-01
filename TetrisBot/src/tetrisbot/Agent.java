@@ -5,8 +5,7 @@
  */
 package tetrisbot;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.InputStreamReader;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.script.ScriptEngine;
@@ -77,11 +76,11 @@ public class Agent {
     try {
       ScriptEngineManager factory = new ScriptEngineManager();
       engine = factory.getEngineByName("JavaScript");
-      engine.eval(new FileReader("src/pieces.js"));
-      engine.eval(new FileReader("src/features.js"));
-      engine.eval(new FileReader("src/eltetris.js"));
-      engine.eval(new FileReader("src/game_html.js"));
-    } catch (ScriptException | FileNotFoundException ex) {
+      engine.eval(new InputStreamReader(getClass().getResourceAsStream("/pieces.js")));
+      engine.eval(new InputStreamReader(getClass().getResourceAsStream("/features.js")));
+      engine.eval(new InputStreamReader(getClass().getResourceAsStream("/eltetris.js")));
+      engine.eval(new InputStreamReader(getClass().getResourceAsStream("/game_html.js")));
+    } catch (ScriptException ex) {
       Logger.getLogger(Agent.class.getName()).log(Level.SEVERE, null, ex);
     }
   }
