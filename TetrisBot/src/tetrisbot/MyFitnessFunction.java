@@ -13,8 +13,16 @@ import net.sourceforge.jswarm_pso.FitnessFunction;
  */
 public class MyFitnessFunction extends FitnessFunction {
 
+  private final Agent agent = new Agent();
+
   @Override
   public double evaluate(double position[]) {
-    return position[0] + position[1];
+    agent.setLandingHeightWt(position[0]);
+    agent.setRowsRemovedWt(position[1]);
+    agent.setRowTransitionWt(position[2]);
+    agent.setColumnTransitionWt(position[3]);
+    agent.setNumHolesWt(position[4]);
+    agent.setWellSumsWt(position[5]);
+    return agent.eval();
   }
 }

@@ -15,7 +15,7 @@ public class MyParticle extends Particle {
 
   // Create a 2-dimentional particle
   public MyParticle() {
-    super(2);
+    super(6);
   }
 
 }
