@@ -19,10 +19,11 @@ public class MyFitnessFunction extends FitnessFunction {
   public double evaluate(double position[]) {
     agent.setLandingHeightWt(position[0]);
     agent.setRowsRemovedWt(position[1]);
-    agent.setRowTransitionWt(position[2]);
-    agent.setColumnTransitionWt(position[3]);
-    agent.setNumHolesWt(position[4]);
-    agent.setWellSumsWt(position[5]);
+    agent.setScoreIncWt(position[2]);
+    agent.setRowTransitionWt(position[3]);
+    agent.setColumnTransitionWt(position[4]);
+    agent.setNumHolesWt(position[5]);
+    agent.setWellSumsWt(position[6]);
     return agent.eval();
   }
 }

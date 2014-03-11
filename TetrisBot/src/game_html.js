@@ -1,7 +1,7 @@
 
 var eltetris = null;
 var moveCount = 0;
-var finalScore = 0;
+var score = 0;
 var moveLimit = 200;
 
 function playGame() {
@@ -13,20 +13,17 @@ function playGame() {
     moveCount++;
 
     if (last_move.game_over || moveCount > moveLimit) {
-      finalScore += eltetris.rows_completed;
+      score += eltetris.score;
       return;
     }
   }
 }
 
 function play() {
-  finalScore = 0;
+  score = 0;
 
-  for (var i = 0; i < 3; i++) {
-    playGame();
-  }
+  playGame();
 
-  finalScore /= 3;
-  println("finalScore:" + finalScore);
+  println("score:" + score);
 }
 

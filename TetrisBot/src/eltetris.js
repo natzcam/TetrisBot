@@ -24,10 +24,10 @@
 //natz
 var scoreChart = [0, 0, 1, 2, 4];
 var comboChart = [0, 0, 1, 1, 2, 2, 3, 3, 4, 4];
-var comboCount = 0;
 
 var landingHeightWt = -4.500158825082766;
 var rowsRemovedWt = 3.4181268101392694;
+var scoreIncWt = 0;
 var rowTransitionWt = -3.2178882868487753;
 var columnTransitionWt = -9.348695305445199;
 var numHolesWt = -7.899265427351652;
@@ -45,7 +45,8 @@ var wellSumsWt = -3.3855972247263626;
 function ElTetris(number_of_columns, number_of_rows) {
   this.number_of_rows = number_of_rows;
   this.number_of_columns = number_of_columns;
-  this.rows_completed = 0;
+  this.comboCount = 0;
+  this.score = 0;
 
   // The board is represented as an array of integers, one integer for each row.
   this.board = new Array(number_of_rows);
@@ -59,21 +60,20 @@ function ElTetris(number_of_columns, number_of_rows) {
 
 ElTetris.prototype.play = function() {
   var piece = this.getRandomPiece();
-  var move = this.pickMove(piece);
+  var move = this.pickMove(this.comboCount, piece);
 
-  var last_move = this.playMove(this.board, move.orientation, move.column);
+  var last_move = this.playMove(this.comboCount, this.board, move.orientation, move.column);
 
   if (!last_move.game_over) {
-    this.rows_completed += comboChart[comboCount];
-    this.rows_completed += scoreChart[last_move.rows_removed];
-  }
+    this.score += last_move.score_inc;
 
-  if (last_move.rows_removed > 0) {
-    if (comboCount < 9) {
-      comboCount++;
+    if (last_move.rows_removed > 0) {
+      if (this.comboCount < 9) {
+        this.comboCount++;
+      }
+    } else {
+      this.comboCount = 0;
     }
-  } else {
-    comboCount = 0;
   }
 
   return last_move;
@@ -94,7 +94,7 @@ ElTetris.prototype.play = function() {
  *     * orientation - The orientation of the piece to use.
  *     * column - The column at which to place the piece.
  */
-ElTetris.prototype.pickMove = function(piece) {
+ElTetris.prototype.pickMove = function(comboCount, piece) {
   var best_evaluation = -100000;
   var best_orientation = 0;
   var best_column = 0;
@@ -108,7 +108,7 @@ ElTetris.prototype.pickMove = function(piece) {
     for (var j = 0; j < this.number_of_columns - piece[i].width + 1; j++) {
       // Copy current board
       var board = this.board.slice();
-      var last_move = this.playMove(board, orientation, j);
+      var last_move = this.playMove(comboCount, board, orientation, j);
 
       if (!last_move.game_over) {
         evaluation = this.evaluateBoard(last_move, board);
@@ -145,6 +145,7 @@ ElTetris.prototype.pickMove = function(piece) {
 ElTetris.prototype.evaluateBoard = function(last_move, board) {
   return GetLandingHeight(last_move, board) * landingHeightWt +
           last_move.rows_removed * rowsRemovedWt +
+          last_move.score_inc * scoreIncWt +
           GetRowTransitions(board, this.number_of_columns) * rowTransitionWt +
           GetColumnTransitions(board, this.number_of_columns) * columnTransitionWt +
           GetNumberOfHoles(board, this.number_of_columns) * numHolesWt +
@@ -162,10 +163,11 @@ ElTetris.prototype.evaluateBoard = function(last_move, board) {
  * Returns:
  *   True if play succeeded, False if game is over.
  */
-ElTetris.prototype.playMove = function(board, piece, column) {
+ElTetris.prototype.playMove = function(comboCount, board, piece, column) {
   piece = this.movePiece(piece, column);
   var placementRow = this.getPlacementRow(board, piece);
   var rowsRemoved = 0;
+  var scoreInc = 0;
 
   if (placementRow + piece.length > this.number_of_rows) {
     // Game over.
@@ -190,10 +192,13 @@ ElTetris.prototype.playMove = function(board, piece, column) {
     }
   }
 
+  scoreInc += comboChart[comboCount] + scoreChart[rowsRemoved];
+
   return {
     'landing_height': placementRow,
     'piece': piece,
     'rows_removed': rowsRemoved,
+    'score_inc': scoreInc,
     'game_over': false
   };
 };

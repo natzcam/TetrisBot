@@ -20,6 +20,7 @@ public class Agent {
 
   private double landingHeightWt = -4.500158825082766;
   private double rowsRemovedWt = 3.4181268101392694;
+  private double scoreIncWt = 0;
   private double rowTransitionWt = -3.2178882868487753;
   private double columnTransitionWt = -9.348695305445199;
   private double numHolesWt = -7.899265427351652;
@@ -31,6 +32,10 @@ public class Agent {
 
   public void setRowsRemovedWt(double rowsRemovedWt) {
     this.rowsRemovedWt = rowsRemovedWt;
+  }
+
+  public void setScoreIncWt(double scoreIncWt) {
+    this.scoreIncWt = scoreIncWt;
   }
 
   public void setRowTransitionWt(double rowTransitionWt) {
@@ -58,12 +63,13 @@ public class Agent {
     try {
       engine.eval("landingHeightWt = " + landingHeightWt + ";");
       engine.eval("rowsRemovedWt = " + rowsRemovedWt + ";");
+      engine.eval("scoreIncWt = " + scoreIncWt + ";");
       engine.eval("rowTransitionWt = " + rowTransitionWt + ";");
       engine.eval("columnTransitionWt = " + columnTransitionWt + ";");
       engine.eval("numHolesWt = " + numHolesWt + ";");
       engine.eval("wellSumsWt = " + wellSumsWt + ";");
       engine.eval("play();");
-      score = (Double) engine.eval("finalScore");
+      score = (Double) engine.eval("score");
     } catch (ScriptException ex) {
       Logger.getLogger(Agent.class.getName()).log(Level.SEVERE, null, ex);
     }
