@@ -13,7 +13,9 @@ import javax.swing.JPanel;
  */
 public interface Sight {
 
-  public void setSightReactor(SightReactor sightReactor);
+  public void setBot(Bot bot);
+  
+  public void setDisplayer(BoardDisplayer displayer);
 
   public JPanel getOption();
   

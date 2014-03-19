@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package nac.tbot.tetrisbattle;
+package nac.tbot;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -10,19 +10,20 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import nac.tbot.Board;
+import nac.tbot.tetrisbattle.TetrisBattleSight;
 
 /**
  *
  * @author nathaniel
  */
-public class TGridPanel extends javax.swing.JPanel {
+public class BoardDisplayer extends javax.swing.JPanel {
 
   private Board board;
 
   /**
    * Creates new form MeasurePanel
    */
-  public TGridPanel() {
+  public BoardDisplayer() {
     initComponents();
   }
 

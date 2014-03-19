@@ -6,7 +6,6 @@ package nac.tbot;
 
 import java.awt.Color;
 import java.util.Arrays;
-import nac.tbot.tetrisbattle.TGridPanel;
 
 /**
  *
@@ -190,7 +189,7 @@ public class Board {
 
   public Board apply(Move move) {
     int column = move.getColumn();
-    Tetramino current = move.getTetramino().move(column);
+    Piece current = move.getTetramino().move(column);
     int[] tdata = current.getData();
     int placementRow = getPlacementRow(current);
     int rowsRemoved = 0;
@@ -229,7 +228,7 @@ public class Board {
             + (double) getWellSums() * -3.3855972247263626;
   }
 
-  private int getPlacementRow(Tetramino tetramino) {
+  private int getPlacementRow(Piece tetramino) {
     int[] tdata = tetramino.getData();
     int[] bdata = this.data;
 
@@ -252,7 +251,7 @@ public class Board {
     for (int i = rows - 1; i >= 0; i--) {
       int row = data[i];
       for (int j = 0; j < columns; j++) {
-        if (TGridPanel.getBit(row, j) == 1) {
+        if (BoardDisplayer.getBit(row, j) == 1) {
           sb.append("1");
         } else {
           sb.append("0");

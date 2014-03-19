@@ -33,7 +33,7 @@ public class MeasureFrame extends javax.swing.JFrame {
   // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
   private void initComponents() {
 
-    measurePanel1 = new nac.tbot.tetrisbattle.TGridPanel();
+    measurePanel1 = new nac.tbot.BoardDisplayer();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
     addWindowListener(new java.awt.event.WindowAdapter() {
@@ -86,6 +86,6 @@ public class MeasureFrame extends javax.swing.JFrame {
 
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
-  private nac.tbot.tetrisbattle.TGridPanel measurePanel1;
+  private nac.tbot.BoardDisplayer measurePanel1;
   // End of variables declaration//GEN-END:variables
 }

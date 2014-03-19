@@ -40,7 +40,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="nac.tbot.tetrisbattle.TGridPanel" name="measurePanel1">
+    <Container class="nac.tbot.BoardDisplayer" name="measurePanel1">
 
       <Layout>
         <DimensionLayout dim="0">

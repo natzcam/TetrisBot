@@ -12,17 +12,17 @@ public class Move {
 
   private int rotation = 0;
   private int column = 0;
-  private final Tetramino tetramino;
+  private final Piece tetramino;
   private int rowsRemoved = 0;
   private boolean gameOver = false;
   private int landingHeight = 0;
   private double score = 0;
 
-  public Move(Tetramino tetramino) {
+  public Move(Piece tetramino) {
     this.tetramino = tetramino;
   }
 
-  public Move(Tetramino tetramino, int rotation, int column) {
+  public Move(Piece tetramino, int rotation, int column) {
     this.tetramino = tetramino;
     this.rotation = rotation;
     this.column = column;
@@ -60,7 +60,7 @@ public class Move {
     this.rowsRemoved = rowsRemoved;
   }
 
-  public Tetramino getTetramino() {
+  public Piece getTetramino() {
     return tetramino;
   }
 

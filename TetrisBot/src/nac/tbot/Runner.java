@@ -52,7 +52,7 @@ public class Runner extends javax.swing.JFrame {
   // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
   private void initComponents() {
 
-    tGridPanel1 = new nac.tbot.tetrisbattle.TGridPanel();
+    tGridPanel1 = new nac.tbot.BoardDisplayer();
     jTabbedPane1 = new javax.swing.JTabbedPane();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -126,6 +126,6 @@ public class Runner extends javax.swing.JFrame {
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JTabbedPane jTabbedPane1;
-  private nac.tbot.tetrisbattle.TGridPanel tGridPanel1;
+  private nac.tbot.BoardDisplayer tGridPanel1;
   // End of variables declaration//GEN-END:variables
 }
