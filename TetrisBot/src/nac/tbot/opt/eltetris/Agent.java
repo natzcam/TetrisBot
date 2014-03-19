@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tetrisbot;
+package nac.tbot.opt.eltetris;
 
 import java.io.InputStreamReader;
 import java.util.logging.Level;
@@ -82,10 +82,10 @@ public class Agent {
     try {
       ScriptEngineManager factory = new ScriptEngineManager();
       engine = factory.getEngineByName("JavaScript");
-      engine.eval(new InputStreamReader(getClass().getResourceAsStream("/pieces.js")));
-      engine.eval(new InputStreamReader(getClass().getResourceAsStream("/features.js")));
-      engine.eval(new InputStreamReader(getClass().getResourceAsStream("/eltetris.js")));
-      engine.eval(new InputStreamReader(getClass().getResourceAsStream("/game_html.js")));
+      engine.eval(new InputStreamReader(getClass().getResourceAsStream("pieces.js")));
+      engine.eval(new InputStreamReader(getClass().getResourceAsStream("features.js")));
+      engine.eval(new InputStreamReader(getClass().getResourceAsStream("eltetris.js")));
+      engine.eval(new InputStreamReader(getClass().getResourceAsStream("game_html.js")));
     } catch (ScriptException ex) {
       Logger.getLogger(Agent.class.getName()).log(Level.SEVERE, null, ex);
     }

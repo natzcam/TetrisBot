@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tetrisbot;
+package nac.tbot.opt.eltetris;
 
 import net.sourceforge.jswarm_pso.Particle;
 
