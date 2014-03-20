@@ -6,8 +6,8 @@
 package nac.tbot;
 
 import javax.swing.JFrame;
-import nac.tbot.tetrisbattle.TetrisBattleActor;
-import nac.tbot.tetrisbattle.TetrisBattleSight;
+//import nac.tbot.tetrisbattle.TetrisBattleActor;
+//import nac.tbot.tetrisbattle.TetrisBattleSight;
 
 /**
  *
@@ -15,32 +15,32 @@ import nac.tbot.tetrisbattle.TetrisBattleSight;
  */
 public class Runner extends javax.swing.JFrame {
 
-  private final Sight sight;
-//  private final Bot bot;
-  private final Actor actor;
+//  private final Sight sight;
+////  private final Bot bot;
+//  private final Actor actor;
 
   /**
    * Creates new form Runner
    */
   public Runner() {
     initComponents();
-    sight = new TetrisBattleSight();
-//    bot = new TetrisBattleBot();
-    sight.setSightReactor(new SightReactor() {
-
-      @Override
-      public void newPiece(int index) {
-        System.out.println("repaint");
-//        bot.newPiece(sight.getBoard(), index);
-        tGridPanel1.setBoard(sight.getBoard());
-        tGridPanel1.repaint();
-      }
-
-    });
-    actor = new TetrisBattleActor();
-//    bot.setActor(actor);
-    jTabbedPane1.addTab("Sight", sight.getOption());
-    jTabbedPane1.addTab("Actor", actor.getOption());
+//    sight = new TetrisBattleSight();
+////    bot = new TetrisBattleBot();
+//    sight.setSightReactor(new SightReactor() {
+//
+//      @Override
+//      public void newPiece(int index) {
+//        System.out.println("repaint");
+////        bot.newPiece(sight.getBoard(), index);
+//        tGridPanel1.setBoard(sight.getBoard());
+//        tGridPanel1.repaint();
+//      }
+//
+//    });
+//    actor = new TetrisBattleActor();
+////    bot.setActor(actor);
+//    jTabbedPane1.addTab("Sight", sight.getOption());
+//    jTabbedPane1.addTab("Actor", actor.getOption());
   }
 
   /**

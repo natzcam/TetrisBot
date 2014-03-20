@@ -11,19 +11,19 @@ package nac.tbot.tetrisbattle;
  */
 public class SightOptionPanel extends javax.swing.JPanel {
 
-  private final TetrisBattleSight sight;
-  private final MeasureFrame measureFrame;
+//  private final TetrisBattleSight sight;
+//  private final MeasureFrame measureFrame;
 
   /**
    * Creates new form OptionFrame
    *
    * @param sight
    */
-  public SightOptionPanel(TetrisBattleSight sight) {
-    this.sight = sight;
-    initComponents();
-    measureFrame = new MeasureFrame(sight);
-  }
+//  public SightOptionPanel(TetrisBattleSight sight) {
+//    this.sight = sight;
+//    initComponents();
+//    measureFrame = new MeasureFrame(sight);
+//  }
 
   /**
    * This method is called from within the constructor to initialize the form.
@@ -63,8 +63,8 @@ public class SightOptionPanel extends javax.swing.JPanel {
 
   private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-    measureFrame.setOpacity(0.5f);
-    measureFrame.setVisible(true);
+//    measureFrame.setOpacity(0.5f);
+//    measureFrame.setVisible(true);
   }//GEN-LAST:event_jButton1ActionPerformed
 
 

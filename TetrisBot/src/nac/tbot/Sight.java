@@ -13,7 +13,7 @@ import javax.swing.JPanel;
  */
 public interface Sight {
 
-  public void setBot(Bot bot);
+  public void setBot(Brain bot);
   
   public void setDisplayer(BoardDisplayer displayer);
 

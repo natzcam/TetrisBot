@@ -9,8 +9,6 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import nac.tbot.Board;
-import nac.tbot.tetrisbattle.TetrisBattleSight;
 
 /**
  *
@@ -18,6 +16,8 @@ import nac.tbot.tetrisbattle.TetrisBattleSight;
  */
 public class BoardDisplayer extends javax.swing.JPanel {
 
+  public static final int GRID_SIZE = 18;
+  private Dimension boardDimension;
   private Board board;
 
   /**
@@ -29,7 +29,11 @@ public class BoardDisplayer extends javax.swing.JPanel {
 
   @Override
   public Dimension getPreferredSize() {
-    return TetrisBattleSight.BOARD_DIMENSION;
+    if (boardDimension != null) {     
+      return boardDimension;
+    } else {
+      return super.getPreferredSize();
+    }
   }
 
   @Override
@@ -57,17 +61,14 @@ public class BoardDisplayer extends javax.swing.JPanel {
 
     if (board != null) {
 
-      int[] data = board.getData();
+      boolean[][] data = board.getData();
       int rows = board.getRows();
       int cols = board.getColumns();
 
       for (int i = 0; i < rows; i++) {
-
-        int ii = (rows - 1) - i;
-        int row = data[ii];
-
+        boolean[] row = data[i];
         for (int j = 0; j < cols; j++) {
-          if (getBit(row, j) == 1) {
+          if (row[j]) {
             g2d.setColor(Color.black);
           } else {
             g2d.setColor(Color.white);
@@ -84,6 +85,10 @@ public class BoardDisplayer extends javax.swing.JPanel {
 
   public static int getBit(int n, int k) {
     return (n >> k) & 1;
+  }
+
+  public void updateDimension() {
+    this.boardDimension = new Dimension(board.getColumns() * GRID_SIZE, board.getRows() * GRID_SIZE);
   }
 
   public void setBoard(Board board) {

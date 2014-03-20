@@ -8,7 +8,7 @@ package nac.tbot;
  *
  * @author camomot
  */
-public interface Bot {
+public interface Brain {
 
   public void setActor(Actor actor);
   
