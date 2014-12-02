@@ -1,0 +1,204 @@
+[
+  
+//I
+[
+{
+  representation: ["1111"],
+  width: 4,
+  height: 1,
+  offset: 3
+},
+{
+  representation: ["1", "1", "1", "1"],
+  width: 1,
+  height: 4,
+  offset: 5
+}
+],
+
+//T
+[{
+  representation: [
+  "010",
+  "111"
+  ],
+  width: 3,
+  height: 2,
+  offset: 3
+},
+{
+  representation: [
+  "10",
+  "11",
+  "10"
+  ],
+  width: 2,
+  height: 3,
+  offset: 4
+},
+{
+  representation: [
+  "111",
+  "010"
+  ],
+  width: 3,
+  height: 2,
+  offset: 3
+},
+{
+  representation: [
+  "01",
+  "11",
+  "01"
+  ],
+  width: 2,
+  height: 3,
+  offset: 3
+}
+],
+
+//O
+[
+{
+  representation: [
+  "11",
+  "11"
+  ],
+  width: 2,
+  height: 2,
+  offset: 4
+}
+],
+
+//J
+[
+{
+  representation: [
+  "100",
+  "111"
+  ],
+  width: 3,
+  height: 2,
+  offset: 3
+},
+{
+  representation: [
+  "11",
+  "10",
+  "10"
+  ],
+  width: 2,
+  height: 3,
+  offset: 4
+},
+{
+  representation: [
+  "111",
+  "001"
+  ],
+  width: 3,
+  height: 2,
+  offset: 3
+},
+{
+  representation: [
+  "01",
+  "01",
+  "11"
+  ],
+  width: 2,
+  height: 3,
+  offset: 3
+}
+],
+
+//L
+[
+{
+  representation: [
+  "001",
+  "111"
+  ],
+  width: 3,
+  height: 2,
+  offset: 3
+},
+{
+  representation: [
+  "10",
+  "10",
+  "11"
+  ],
+  width: 2,
+  height: 3,
+  offset: 4
+},
+{
+  representation: [
+  "111",
+  "100"
+  ],
+  width: 3,
+  height: 2,
+  offset: 3
+},
+{
+  representation: [
+  "11",
+  "01",
+  "01"
+  ],
+  width: 2,
+  height: 3,
+  offset: 3
+}
+
+],
+
+//S
+[
+{
+  representation: [
+  "011",
+  "110"
+  ],
+  width: 3,
+  height: 2,
+  offset: 3
+},
+{
+  representation: [
+  "10",
+  "11",
+  "01"
+  ],
+  width: 2,
+  height: 3,
+  offset: 4
+}
+
+],
+
+//Z
+[
+{
+  representation: [
+  "110",
+  "011"
+  ],
+  width: 3,
+  height: 2,
+  offset: 3
+},
+{
+  representation: [
+  "01",
+  "11",
+  "10"
+  ],
+  width: 2,
+  height: 3,
+  offset: 4
+}
+]
+]
