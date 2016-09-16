@@ -1,11 +1,8 @@
-*TBot* is a bot for tetris games on [http://www.tetrisfriends.com tetrisfriends.com] and Tetris Battle on Facebook.
+*TBot* is a bot for tetris games on [tetrisfriends.com](http://www.tetrisfriends.com) and [Tetris Battle](https://apps.facebook.com/tetris_battle/) on Facebook.
 
-This bot uses java.awt.Robot class to "visualize" the board by identifying piece colors and detect the current piece. It selects the between the current piece and the piece on hold and which position and orientation will generate the best outcome of the tetris board. Additionally, the bot will go through buildup and breakdown phases which greatly increases the chances to score.
+This bot uses [java.awt.Robot](https://docs.oracle.com/javase/7/docs/api/java/awt/Robot.html) class to "visualize" the board by identifying piece colors and detect the current piece through color-nearness . It selects the between the current piece and the piece on hold and which position and orientation will generate the best outcome of the tetris board. Additionally, the bot will go through buildup and breakdown phases which greatly increases the chances to score.
 
-The algorithm used is mainly based on [http://ielashi.com/el-tetris-an-improvement-on-pierre-dellacheries-algorithm/ El-Tetris] but implemented in java.
-
-===TBot v1.3 [https://drive.google.com/folderview?id=0BwaWDMD7MRkxRXJOc3MyYzF0U2M&usp=sharing DOWNLOAD]===
-Modified the piece detection to use color nearness algorithm instead of exact RGB values to cater to other types of games in [http://www.tetrisfriends.com tetrisfriends.com]
+The algorithm used is mainly based on [El-Tetris](http://ielashi.com/el-tetris-an-improvement-on-pierre-dellacheries-algorithm) but implemented in java.
 
 Marathon Mode: Reduce the number of buildup limit and breakdown limit ex: 5/0
 
