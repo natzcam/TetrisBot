@@ -5,8 +5,6 @@ This bot uses [java.awt.Robot](https://docs.oracle.com/javase/7/docs/api/java/aw
 
 The algorithm used is mainly based on [El-Tetris](http://ielashi.com/el-tetris-an-improvement-on-pierre-dellacheries-algorithm) but implemented in java.
 
-Marathon Mode: Reduce the number of buildup limit and breakdown limit ex: 5/0
-
 ##Bot in action...
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=Gmp3qFVQiCM
 " target="_blank"><img src="http://img.youtube.com/vi/Gmp3qFVQiCM/0.jpg" 
@@ -21,6 +19,8 @@ alt="TBot" width="240" height="180" border="10" /></a>
 5. Just press the "Find Board" button and adjust the transparent window that will popout to the edges of the tetris board. *Closing the transparent window* will store the board location so do not move the tetris board after.
 6. Press the "Start" button on the game and just maintain window focus on the browser and that's it. It will automatically detect the start of the game.
 
+Marathon Mode: Reduce the number of buildup limit and breakdown limit ex: 5/0
+
 ##Options
 
 **Key Delay** - This is the time delay before the key/move is sent to the focused window.
@@ -34,8 +34,8 @@ This number should be balanced. If the number is very low, the bot will go crazy
 
 ##TODO
 
-  1-piece lookahead
-  better board awareness
+  * 1-piece lookahead
+  * better board awareness
 
 ##Disclaimer
 
