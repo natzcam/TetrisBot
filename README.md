@@ -7,9 +7,9 @@ The algorithm used is mainly based on [El-Tetris](http://ielashi.com/el-tetris-a
 Marathon Mode: Reduce the number of buildup limit and breakdown limit ex: 5/0
 
 ===Bot in Action===
-
-[http://vimeo.com/61396163 http://vimeo.com/61396163] - this is a previous version.
-
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Gmp3qFVQiCM
+" target="_blank"><img src="http://img.youtube.com/vi/Gmp3qFVQiCM/0.jpg" 
+alt="TBot" width="240" height="180" border="10" /></a>
 
 ===Instructions===
 
