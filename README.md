@@ -1,16 +1,14 @@
-#TBot
-a bot for tetris games on [tetrisfriends.com](http://www.tetrisfriends.com) and [Tetris Battle](https://apps.facebook.com/tetris_battle/) on Facebook.
+# TBot
+> a bot for tetris games on [tetrisfriends.com](http://www.tetrisfriends.com) and [Tetris Battle](https://apps.facebook.com/tetris_battle/) on Facebook.
 
 This bot uses [java.awt.Robot](https://docs.oracle.com/javase/7/docs/api/java/awt/Robot.html) class to "visualize" the board by identifying piece colors and detect the current piece through color-nearness . It selects the between the current piece and the piece on hold and which position and orientation will generate the best outcome of the tetris board. Additionally, the bot will go through buildup and breakdown phases which greatly increases the chances to score.
 
 The algorithm used is mainly based on [El-Tetris](http://ielashi.com/el-tetris-an-improvement-on-pierre-dellacheries-algorithm) but implemented in java.
 
-##Bot in action...
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=Gmp3qFVQiCM
-" target="_blank"><img src="http://img.youtube.com/vi/Gmp3qFVQiCM/0.jpg" 
-alt="TBot" width="240" height="180" border="10" /></a>
+## Bot in action...
+[![TBot](https://img.youtube.com/vi/Gmp3qFVQiCM/0.jpg)](https://www.youtube.com/watch?v=Gmp3qFVQiCM)
 
-##Instructions
+## Instructions
 
 1. Download and install [java](http://www.java.com/en/download/index.jsp) if you haven't it yet.
 2. Download the zip file from [here](https://drive.google.com/folderview?id=0BwaWDMD7MRkxRXJOc3MyYzF0U2M&usp=sharing). Then, unzip it anywhere.
@@ -21,7 +19,7 @@ alt="TBot" width="240" height="180" border="10" /></a>
 
 Marathon Mode: Reduce the number of buildup limit and breakdown limit ex: 5/0
 
-##Options
+## Options
 
 **Key Delay** - This is the time delay before the key/move is sent to the focused window.
 This number should be balanced. If the number is very low, the bot will go crazy. If the number is very high, the bot is slow.
@@ -32,11 +30,11 @@ This number should be balanced. If the number is very low, the bot will go crazy
 
 **Breakdown Limit** - The height of the board that will trigger the bot to go into the Buildup phase and increase its height while maintaining the tower gap.
 
-##TODO
+## TODO
 
   * 1-piece lookahead
   * better board awareness
 
-##Disclaimer
+## Disclaimer
 
 This will not make you rank 100 in Tetris Battle. Skilled humans can beat this bot.
